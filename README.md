@@ -42,23 +42,32 @@ This repository contains a comprehensive assignment management system with two m
 
 To get a local copy of this project, use the following Git commands:
 
-```bash
 # Clone the repository
+```bash
 git clone https://github.com/Ester-Nachum/assignments-management-system.git
+```
 
 # Setup ASP.Net Core project
 # (You may need to install required dependencies or tools)
+```bash
 dotnet restore
 dotnet build
+```
 
 # Apply Entity Framework Core migrations
+```bash
 dotnet ef database update
+```
 
 # Setup Angular project
+```bash
 npm install
+```
 
 # Start the Angular application
+```bash
 ng serve
+```
 
 ## Project Highlights
 

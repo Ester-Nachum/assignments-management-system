@@ -1,89 +1,73 @@
 # Assignments Management System
 
-## Overview
+The assignments management system is a web for assignments management, providing features to display, create, update, and delete assignments.
 
-This project involves the development of a task management system. The system will display a list of tasks and allow users to create, update, or delete tasks.
+## Project Overview
 
-## Exercise Description
+This repository contains a comprehensive assignment management system with two main components: an ASP.Net Core 7.0 server and an Angular 16 client.
 
-### Task Definition
+### Server (ASP.Net Core 7.0)
 
-A task can fall into one of three categories:
-- Personal Task
-- Work Task
-- Learning Task
+#### Key Features:
 
-Additionally, a task can be either recurring or one-time. It must have a start time, and it may or may not have a specified end date. Each task must have a name, and a description is optional. Tasks can be marked as "completed."
+- **Entity Framework Core + Migrations:**
+  - Extensive use of EF Core for robust data management.
+  - Incorporation of planning, migrations, queries, updates, and performance optimizations.
+- **Clean C# Code and Design Patterns:**
+  - Emphasis on clean C# coding practices, design patterns, and interfaces.
+- **Paged List:**
+  - Implementation of Paged List for efficient data handling.
 
-### Project Structure
+### Client (Angular 16)
 
-The exercise comprises two projects:
+#### Notable Components:
 
-1. **Assignments.API** - ASP.Net Core Project (using .Net Core 2.2 and above)
-2. **Assignments.Client** - Angular Project (using Angular 10 and above)
+- **PrimeNG:**
+  - Integration of PrimeNG library for enhanced UI components.
+- **RxJs:**
+  - Implementation of reactive programming using RxJs.
+- **Communication with API:**
+  - Utilization of TypeScript for improved type safety.
+  - Seamless interaction with the server-side API.
 
-### Assignments.API Highlights
+### Database Integration
 
-1. **Service Requirements:**
-   - Create a new task service.
-   - Update a task status as "completed."
-   - Delete a task.
-   - Retrieve all relevant tasks in descending order of dates.
-   - Retrieve a specific task.
-   - Retrieve task types.
+- **SQL Server:**
+  - The project establishes a connection to a SQL Server database for data storage.
 
-2. **Implementation Details:**
-   - Utilize Entity Framework Core + Migrations.
-   - Pay attention to clean C# coding, design patterns, and interfaces.
-   - Consider using SQL Server Express as the DB provider (free download).
+## Getting Started
 
-3. **Bonus:**
-   - Implement Paged List for the service retrieving all tasks.
+### Server Setup:
+## Clone Repository
 
-### Assignments.Client Highlights
+To get a local copy of this project, use the following Git commands:
 
-1. **Dependencies:**
-   - Use PrimeNg library for UI components.
+```bash
+# Clone the repository
+git clone https://github.com/Ester-Nachum/assignments-management-system.git
 
-2. **Screens to Build:**
+# Setup ASP.Net Core project
+# (You may need to install required dependencies or tools)
+dotnet restore
+dotnet build
 
-   - **Task Table Screen:**
-     - Display relevant tasks in a grid.
-     - Include columns for:
-       - Unique task ID
-       - Task type
-       - Task name
-       - Task description
-       - Start date
-       - End date
-       - Recurring indicator
-       - Checkbox for marking tasks as completed
-       - Button for updating task status based on the checkbox
-       - Button for deleting a task
-     - Include a button above the table leading to the "Create New Task" screen.
+# Apply Entity Framework Core migrations
+dotnet ef database update
 
-   - **New Task Form Screen:**
-     - Include a back button to return to the previous screen.
-     - Create a request form using Reactive Forms with validation.
-     - Use text, date, and dropdown components for selection fields.
-     - Include a "Submit" button at the end of the form, enabled only after passing validation.
-     - After submitting, return to the task table screen to view the new task.
+# Setup Angular project
+npm install
 
-3. **Implementation Details:**
-   - Use RxJs.
-   - Communicate with the API.
-   - Utilize PrimeNg library capabilities.
-   - Leverage TypeScript features.
-   - Focus on a clear and organized structure rather than elaborate design.
+# Start the Angular application
+ng serve
 
-4. **Bonus:**
-   - Implement column sorting in the table, allowing ascending and descending order based on column headers.
+## Project Highlights
 
-## Instructions
+- Display, create, update, and delete assignment seamlessly.
+- Efficient data handling with Paged List.
+- PrimeNG integration for an enhanced user interface.
+- Reactive programming with RxJs.
+- Clean C# coding practices and design patterns.
 
-1. Clone the repository.
-2. Set up and run the Assignments.API project.
-3. Set up and run the Assignments.Client project.
-4. Test the functionality of task creation, update, and deletion.
-
-Feel free to reach out for any clarifications or assistance!
+## Screenshots
+![image](https://github.com/Ester-Nachum/assignments-management-system/assets/96005550/02c53ace-c5ae-4d55-8aff-14cc1f84ea78)
+![image](https://github.com/Ester-Nachum/assignments-management-system/assets/96005550/d36c4d19-a08d-4446-92d3-5a8e7125b33d)
